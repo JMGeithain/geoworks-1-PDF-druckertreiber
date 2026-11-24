@@ -1,0 +1,1357 @@
+{
+ "target": "GeoWorks Ensemble 1.2 (deutsch), KERNEL.EXE sha256 c2cc8952cdb01d0f..., 577 Eintraege",
+ "entries": [
+  {
+   "ordinal": 0,
+   "name_1x": "MemAlloc",
+   "name_2x": "MemAlloc",
+   "confidence": "sicher",
+   "evidence": "pcgeos-1-sdk-v2 (beobachtet), Code-Form passt",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 2,
+   "name_1x": "MemFree",
+   "name_2x": "MemFree",
+   "confidence": "sicher",
+   "evidence": "pcgeos-1-sdk-v2 (beobachtet), Code-Form passt",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 5,
+   "name_1x": "MemLock",
+   "name_2x": "MemLock",
+   "confidence": "sicher",
+   "evidence": "pcgeos-1-sdk-v2 (beobachtet), Code-Form passt",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 6,
+   "name_1x": "MemUnlock",
+   "name_2x": "MemUnlock",
+   "confidence": "sicher",
+   "evidence": "pcgeos-1-sdk-v2 (beobachtet), Code-Form passt",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 24,
+   "name_1x": "LMemInitHeap",
+   "name_2x": "LMemInitHeap",
+   "confidence": "sicher (getestet)",
+   "evidence": "PS.GEO: frischer Block, AX=Typ, CX=Handles, DX=Kopfgroesse; Test K12 (GeoWorks 1.28, 20.11.2026): OK",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 25,
+   "name_1x": "LMemAlloc",
+   "name_2x": "LMemAlloc",
+   "confidence": "sicher (getestet)",
+   "evidence": "CX=Groesse -> AX=Chunk (PS.GEO, 6 Aufrufe nach Init); Test K12 (GeoWorks 1.28, 20.11.2026): OK",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 27,
+   "name_1x": "LMemFree",
+   "name_2x": "LMemFree",
+   "confidence": "sicher (getestet)",
+   "evidence": "AX=Chunk, gibt Chunk frei; Test K12 (GeoWorks 1.28, 20.11.2026): ohne Absturz",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 28,
+   "name_1x": "LMemReAlloc",
+   "name_2x": "LMemReAlloc",
+   "confidence": "sicher (getestet)",
+   "evidence": "AX=Chunk, CX=neue Groesse; Test K12 (GeoWorks 1.28, 20.11.2026): Inhalt bleibt erhalten, Laengenwort = Groesse+2 OK",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 49,
+   "name_1x": "FileCreateDir",
+   "name_2x": "FileCreateDir",
+   "confidence": "sicher",
+   "evidence": "ruft DOS INT 21h AH=39h",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 50,
+   "name_1x": "FileDeleteDir",
+   "name_2x": "FileDeleteDir",
+   "confidence": "sicher",
+   "evidence": "ruft DOS INT 21h AH=3Ah",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 51,
+   "name_1x": "FileSetCurrentPath",
+   "name_2x": "FileSetCurrentPath",
+   "confidence": "sicher",
+   "evidence": "pcgeos-1-sdk-v2 (beobachtet), Code-Form passt",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 52,
+   "name_1x": "FileOpen",
+   "name_2x": "FileOpen",
+   "confidence": "sicher",
+   "evidence": "pcgeos-1-sdk-v2 (beobachtet), Code-Form passt; DOS 3Dh",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 53,
+   "name_1x": "FileCreate",
+   "name_2x": "FileCreate",
+   "confidence": "sicher",
+   "evidence": "pcgeos-1-sdk-v2 (beobachtet), Code-Form passt",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 54,
+   "name_1x": "FileClose",
+   "name_2x": "FileClose",
+   "confidence": "sicher",
+   "evidence": "ruft DOS INT 21h AH=3Eh",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 55,
+   "name_1x": "FileCreateTempFile",
+   "name_2x": "FileCreateTempFile",
+   "confidence": "sicher",
+   "evidence": "ruft DOS INT 21h AH=5Ah",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 56,
+   "name_1x": "FileDelete",
+   "name_2x": "FileDelete",
+   "confidence": "sicher",
+   "evidence": "ruft DOS INT 21h AH=41h",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 57,
+   "name_1x": "FileRename",
+   "name_2x": "FileRename",
+   "confidence": "sicher",
+   "evidence": "ruft DOS INT 21h AH=56h",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 58,
+   "name_1x": "FileRead",
+   "name_2x": "FileRead",
+   "confidence": "sicher",
+   "evidence": "ruft DOS INT 21h AH=3Fh",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 59,
+   "name_1x": "FileWrite",
+   "name_2x": "FileWrite",
+   "confidence": "sicher",
+   "evidence": "ruft DOS INT 21h AH=40h",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 60,
+   "name_1x": "FilePos",
+   "name_2x": "FilePos",
+   "confidence": "sicher",
+   "evidence": "ruft DOS INT 21h AH=42h",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 62,
+   "name_1x": "FileDuplicateHandle",
+   "name_2x": "FileDuplicateHandle",
+   "confidence": "sicher",
+   "evidence": "ruft DOS INT 21h AH=46h",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 63,
+   "name_1x": "FileLockRecord",
+   "name_2x": "FileLockRecord",
+   "confidence": "sicher",
+   "evidence": "ruft DOS INT 21h AH=5Ch/AL=0",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 64,
+   "name_1x": "FileUnlockRecord",
+   "name_2x": "FileUnlockRecord",
+   "confidence": "sicher",
+   "evidence": "ruft DOS INT 21h AH=5Ch/AL=1",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 66,
+   "name_1x": "FileGetAttributes",
+   "name_2x": "FileGetAttributes",
+   "confidence": "sicher",
+   "evidence": "ruft DOS INT 21h AH=4300h",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 68,
+   "name_1x": "FileGetDateAndTime",
+   "name_2x": "FileGetDateAndTime",
+   "confidence": "sicher",
+   "evidence": "ruft DOS INT 21h AH=57h/AL=0",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 69,
+   "name_1x": "FileSetDateAndTime",
+   "name_2x": "FileSetDateAndTime",
+   "confidence": "sicher",
+   "evidence": "ruft DOS INT 21h AH=57h/AL=1",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 73,
+   "name_1x": "FilePushDir",
+   "name_2x": "FilePushDir",
+   "confidence": "wahrscheinlich",
+   "evidence": "Paar mit 74 um FileCreate/FileOpen in PSCRIPT/SPOOL",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 74,
+   "name_1x": "FilePopDir",
+   "name_2x": "FilePopDir",
+   "confidence": "wahrscheinlich",
+   "evidence": "s. 73",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 76,
+   "name_1x": "FileSetStandardPath",
+   "name_2x": "FileSetStandardPath",
+   "confidence": "wahrscheinlich",
+   "evidence": "AX=Standardpfad (3, 6) vor FileOpen/FileCreate",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 77,
+   "name_1x": "FileTruncate",
+   "name_2x": "FileTruncate",
+   "confidence": "wahrscheinlich",
+   "evidence": "CX:DX=Laenge aus FilePos, AL=80h",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 91,
+   "name_1x": "FileSize",
+   "name_2x": "FileSize",
+   "confidence": "wahrscheinlich",
+   "evidence": "BX=Datei, Ergebnis als MemAlloc-Groesse",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 147,
+   "name_1x": "(Ressource sperren)",
+   "name_2x": null,
+   "confidence": "Funktion bekannt",
+   "evidence": "Handle-Lock mit Nachladen; BX=Ressourcen-Handle -> AX=Segment, freigeben mit MemUnlock",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 149,
+   "name_1x": "GeodeGetProcessHandle",
+   "name_2x": "GeodeGetProcessHandle",
+   "confidence": "sicher",
+   "evidence": "pcgeos-1-sdk-v2 (beobachtet), Code-Form passt",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 150,
+   "name_1x": "GeodeGetResourceHandle",
+   "name_2x": "GeodeGetResourceHandle",
+   "confidence": "sicher",
+   "evidence": "pcgeos-1-sdk-v2 (beobachtet), Code-Form passt",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 164,
+   "name_1x": "ProcCallModuleRoutine",
+   "name_2x": "ProcCallModuleRoutine",
+   "confidence": "wahrscheinlich",
+   "evidence": "BX=Ressourcen-Handle, AX=Offset; Treiber-Dispatcher",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 169,
+   "name_1x": "ObjMessage",
+   "name_2x": "ObjMessage",
+   "confidence": "sicher",
+   "evidence": "pcgeos-1-sdk-v2 (beobachtet), Code-Form passt",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 184,
+   "name_1x": "TimerSleep",
+   "name_2x": "TimerSleep",
+   "confidence": "sicher",
+   "evidence": "pcgeos-1-sdk-v2 (beobachtet), Code-Form passt",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 187,
+   "name_1x": "TimerGetDateAndTime",
+   "name_2x": "TimerGetDateAndTime",
+   "confidence": "sicher (getestet)",
+   "evidence": "liefert AX..DX aus der Kernel-Uhr; PS.GEO Datumszeile; Test K12 (GeoWorks 1.28, 20.11.2026): AX=Jahr, BL=Monat, BH=Tag, CL=Wochentag, CH=Std, DL=Min, DH=Sek OK",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 198,
+   "name_1x": "GrFontMetrics",
+   "name_2x": "GrFontMetrics",
+   "confidence": "wahrscheinlich",
+   "evidence": "SI=Metrik-Index -> DX.AH; Test K12 (GeoWorks 1.28, 20.11.2026): SI=2/6/12h/14h -> 6, 10, 11, 1 (plausibel, Bedeutung der Indizes offen)",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 202,
+   "name_1x": "GrSetDocClipRect",
+   "name_2x": "GrSetWinClipRect",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 89 (GR_SET_DOC_CLIP_RECT)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 204,
+   "name_1x": "GrCopyGString",
+   "name_2x": "GrCopyGString",
+   "confidence": "sicher (getestet)",
+   "evidence": "zwischen GrCreateGString und GrDestroyGString, CX=2000h; KLIB #43; Test K12 (GeoWorks 1.28, 20.11.2026): SI=Quelle, DI=Ziel-GState, CX=2000h kopiert das anstehende Element und rueckt weiter OK",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 208,
+   "name_1x": "GrCallFontDriverID",
+   "name_2x": "GrCallFontDriverID",
+   "confidence": "wahrscheinlich",
+   "evidence": "AX=FontID, DI=Treiberfunktion",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 210,
+   "name_1x": "GrSetClipRect",
+   "name_2x": "GrSetClipRect",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 88 (GR_SET_CLIP_RECT)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 211,
+   "name_1x": "GrCreateState",
+   "name_2x": "GrCreateState",
+   "confidence": "sicher",
+   "evidence": "pcgeos-1-sdk-v2 (beobachtet), Code-Form passt",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 212,
+   "name_1x": "GrDestroyState",
+   "name_2x": "GrDestroyState",
+   "confidence": "sicher",
+   "evidence": "pcgeos-1-sdk-v2 (beobachtet), Code-Form passt",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 221,
+   "name_1x": "(Schrift sperren)",
+   "name_2x": null,
+   "confidence": "Funktion bekannt",
+   "evidence": "DS=GState -> AX=Segment des Font-Blocks",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 222,
+   "name_1x": "(Schrift freigeben)",
+   "name_2x": null,
+   "confidence": "Funktion bekannt",
+   "evidence": "Gegenstueck zu 221",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 223,
+   "name_1x": "GrTextWidthWBFixed",
+   "name_2x": "GrTextWidthWBFixed",
+   "confidence": "sicher (getestet)",
+   "evidence": "nach GrSetTextAttr, Ergebnis DX.AH; Test K12 (GeoWorks 1.28, 20.11.2026): DI=GState, DS:SI=Text, CX=Anzahl -> DX.AH Breite; Strich am Textende OK",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 227,
+   "name_1x": "GrMulWWFixed",
+   "name_2x": "GrMulWWFixed",
+   "confidence": "sicher (getestet)",
+   "evidence": "DX.CX * BX.AX, dpi-Umrechnung; Test K12 (GeoWorks 1.28, 20.11.2026): 3.5*2=7.0 OK",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 228,
+   "name_1x": "GrSDivWWFixed",
+   "name_2x": "GrSDivWWFixed",
+   "confidence": "sicher (getestet)",
+   "evidence": "Division DX.CX / BX.AX; Test K12 (GeoWorks 1.28, 20.11.2026): -7/2=-3.5 OK",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 229,
+   "name_1x": "GrUDivWWFixed",
+   "name_2x": "GrUDivWWFixed",
+   "confidence": "sicher (getestet)",
+   "evidence": "Division durch Aufloesung vor Mul 72; Test K12 (GeoWorks 1.28, 20.11.2026): 9/4=2.25 OK",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 247,
+   "name_1x": "GrMapColorIndex",
+   "name_2x": "GrMapColorIndex",
+   "confidence": "sicher (getestet)",
+   "evidence": "AL/AH=Palettenindex, DI=0; Test K12 (GeoWorks 1.28, 20.11.2026): AH=Index -> AL=R, BL=G, BH=B (Index 4 = AA 00 00) OK",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 258,
+   "name_1x": "GrGetMixMode",
+   "name_2x": "GrGetMixMode",
+   "confidence": "sicher (getestet)",
+   "evidence": "liest GState-Feld 0x64 wie GrSetDrawMode (343); Test K12 (GeoWorks 1.28, 20.11.2026): Set/Get 4 OK",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 259,
+   "name_1x": "GrGetLineColor",
+   "name_2x": "GrGetLineColor",
+   "confidence": "sicher",
+   "evidence": "liest GState-Feld Linien-Attributblock 0x4c",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 260,
+   "name_1x": "GrGetAreaColor",
+   "name_2x": "GrGetAreaColor",
+   "confidence": "sicher",
+   "evidence": "liest GState-Feld Flaechen-Block 0x7b",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 261,
+   "name_1x": "GrGetTextColor",
+   "name_2x": "GrGetTextColor",
+   "confidence": "sicher",
+   "evidence": "liest GState-Feld Text-Block 0x91",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 262,
+   "name_1x": "GrGetLineMask",
+   "name_2x": "GrGetLineMask",
+   "confidence": "sicher",
+   "evidence": "liest GState-Feld Block 0x4c",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 263,
+   "name_1x": "GrGetAreaMask",
+   "name_2x": "GrGetAreaMask",
+   "confidence": "sicher",
+   "evidence": "liest GState-Feld Block 0x7b",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 264,
+   "name_1x": "GrGetTextMask",
+   "name_2x": "GrGetTextMask",
+   "confidence": "sicher",
+   "evidence": "liest GState-Feld Block 0x91",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 265,
+   "name_1x": "GrGetLineColorMap",
+   "name_2x": "GrGetLineColorMap",
+   "confidence": "sicher",
+   "evidence": "liest GState-Feld Byte 0x4c wie GrSetLineColorMap (348)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 266,
+   "name_1x": "GrGetAreaColorMap",
+   "name_2x": "GrGetAreaColorMap",
+   "confidence": "sicher",
+   "evidence": "liest GState-Feld 0x7b",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 267,
+   "name_1x": "GrGetTextColorMap",
+   "name_2x": "GrGetTextColorMap",
+   "confidence": "sicher",
+   "evidence": "liest GState-Feld 0x91",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 268,
+   "name_1x": "GrGetTextSpacePad",
+   "name_2x": "GrGetTextSpacePad",
+   "confidence": "sicher",
+   "evidence": "liest GState-Feld 0xac/0xab wie GrSetTextSpacePad (364)",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 269,
+   "name_1x": "GrGetTextStyle",
+   "name_2x": "GrGetTextStyle",
+   "confidence": "sicher",
+   "evidence": "liest GState-Feld 0x8f wie GrSetTextStyle (362)",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 270,
+   "name_1x": "GrGetTextMode",
+   "name_2x": "GrGetTextMode",
+   "confidence": "sicher",
+   "evidence": "liest GState-Feld 0x90 wie GrSetTextMode (363)",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 271,
+   "name_1x": "GrGetLineWidth",
+   "name_2x": "GrGetLineWidth",
+   "confidence": "sicher (getestet)",
+   "evidence": "liest GState-Feld Wort 0x5e wie GrSetLineWidth (349); Test K12 (GeoWorks 1.28, 20.11.2026): Set/Get 3 OK",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 272,
+   "name_1x": "GrGetLineEnd",
+   "name_2x": "GrGetLineEnd",
+   "confidence": "sicher",
+   "evidence": "liest GState-Feld 0x5d wie GrSetLineEnd (351)",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 273,
+   "name_1x": "GrGetLineJoin",
+   "name_2x": "GrGetLineJoin",
+   "confidence": "sicher",
+   "evidence": "liest GState-Feld 0x5c wie GrSetLineJoin (350)",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 274,
+   "name_1x": "GrGetMiterLimit",
+   "name_2x": "GrGetMiterLimit",
+   "confidence": "sicher",
+   "evidence": "liest GState-Feld 0x62 + Hilfsroutine 66E0h wie GrSetMiterLimit (353)",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 275,
+   "name_1x": "GrGetCurPos",
+   "name_2x": "GrGetCurPos",
+   "confidence": "sicher (getestet)",
+   "evidence": "GrGetInfo mit festem Typ 4; Test K12 (GeoWorks 1.28, 20.11.2026): MoveTo 50,60 -> AX,BX OK",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 276,
+   "name_1x": "GrGetInfo",
+   "name_2x": "GrGetInfo",
+   "confidence": "wahrscheinlich",
+   "evidence": "Typ in AX, Sprungtabelle",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 279,
+   "name_1x": "GrDestroyGString",
+   "name_2x": "GrDestroyGString",
+   "confidence": "sicher (getestet)",
+   "evidence": "DI=GString, DL=1; KLIB #44; Test K12 (GeoWorks 1.28, 20.11.2026): DI=GState/GString, DL=1 behaelt Daten OK",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 280,
+   "name_1x": "GrLoadGString",
+   "name_2x": "GrLoadGString",
+   "confidence": "sicher (getestet)",
+   "evidence": "BX=Datei, CL=Typ -> SI=GString (Spooler); Test K12 (GeoWorks 1.28, 20.11.2026): CL=0, BX=Block, SI=Chunk -> SI=GString OK",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 281,
+   "name_1x": "GrCreateGString",
+   "name_2x": "GrCreateGString",
+   "confidence": "sicher (getestet)",
+   "evidence": "wie 280 mit CH=1; KLIB #52; Test K12 (GeoWorks 1.28, 20.11.2026): CL=0, BX=Block, AX=SI=Chunk -> DI (Aufzeichnungs-GState) OK",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 282,
+   "name_1x": "GrGetGStringElement",
+   "name_2x": "GrGetGStringElement",
+   "confidence": "wahrscheinlich",
+   "evidence": "KLIB #40, liefert AL=Opcode",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 283,
+   "name_1x": "GrDrawGString",
+   "name_2x": "GrDrawGString",
+   "confidence": "sicher (getestet)",
+   "evidence": "GrMoveTo(AX,BX), dann KLIB #42; BP=Steuerflags, DX=Stopp-Opcode; Test K12 (GeoWorks 1.28, 20.11.2026): BP=4800h: Stopp vor jedem Zeichenbefehl, BP=4 zurueck, DL=Opcode; Ende BP=FFh, DL=0. BP=2000h fuehrt ein Element aus. Attribute wirken auf den Ziel-GState. OK",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 284,
+   "name_1x": "GrDrawGStringAtCP",
+   "name_2x": "GrDrawGStringAtCP",
+   "confidence": "wahrscheinlich",
+   "evidence": "wie 283 ohne MoveTo",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 286,
+   "name_1x": "GrGetTransform",
+   "name_2x": "GrGetTransform",
+   "confidence": "sicher (getestet)",
+   "evidence": "DS:SI=24-Byte-Puffer (TransMatrix); Test K12 (GeoWorks 1.28, 20.11.2026): DS:SI=24 Byte, 6x WWFixed (frac,int); ApplyScale DX.CX=x, BX.AX=y OK",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 287,
+   "name_1x": "GrSetBitmapRes",
+   "name_2x": "GrSetBitmapRes",
+   "confidence": "wahrscheinlich",
+   "evidence": "schreibt Bitmap+10h/12h bei komplexer Bitmap",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 288,
+   "name_1x": "GrGetBitmapRes",
+   "name_2x": "GrGetBitmapRes",
+   "confidence": "wahrscheinlich",
+   "evidence": "liest +10h/12h, Vorgabe 72",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 290,
+   "name_1x": "GrGetBorderWidth",
+   "name_2x": null,
+   "confidence": "sicher",
+   "evidence": "liest GState-Feld Wort 0x8b wie GrSetBorderWidth (373)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 291,
+   "name_1x": "GrGetBorderJoin",
+   "name_2x": null,
+   "confidence": "sicher",
+   "evidence": "liest GState-Feld 0x8a wie GrSetBorderJoin (374)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 293,
+   "name_1x": "GrGetFont",
+   "name_2x": "GrGetFont",
+   "confidence": "sicher (getestet)",
+   "evidence": "liest GState-Feld 0xb0/0xb2/0xb3 wie GrSetFont (366); Test K12 (GeoWorks 1.28, 20.11.2026): CX=FontID 0202, DX.AH=Groesse 10 pt",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 295,
+   "name_1x": "GrGetLineStyle",
+   "name_2x": "GrGetLineStyle",
+   "confidence": "sicher (getestet)",
+   "evidence": "GState 0x5b neben Join/End/Width; Test K12 (GeoWorks 1.28, 20.11.2026): Set/Get 1 OK",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 296,
+   "name_1x": "GrEnumFonts",
+   "name_2x": "GrEnumFonts",
+   "confidence": "wahrscheinlich",
+   "evidence": "KLIB #120, Reihenfolge wie 2.0",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 297,
+   "name_1x": "GrCheckFontAvail",
+   "name_2x": "GrCheckFontAvail",
+   "confidence": "offen (Test widerspruechlich)",
+   "evidence": "CX=FontID, DL=Flags -> CX=0 wenn fehlt; Test K12 (GeoWorks 1.28, 20.11.2026): eigene ID 0202 und 7777h liefern beide 0. Vermutung: DL=1 fragt nur Outline-Schriften ab, Berkeley ist Bitmap. Nachtest mit DL=0 und Outline-Schrift noetig",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 298,
+   "name_1x": "GrFindNearestPointsize",
+   "name_2x": "GrFindNearestPointsize",
+   "confidence": "wahrscheinlich",
+   "evidence": "KLIB #122, Reihenfolge wie 2.0",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 301,
+   "name_1x": "GrEndString",
+   "name_2x": "GrEndGString",
+   "confidence": "sicher (getestet)",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 0 (GR_END_STRING); Test K12 (GeoWorks 1.28, 20.11.2026): OK",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 302,
+   "name_1x": "GrComment",
+   "name_2x": "GrComment",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 1 (GR_COMMENT)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 303,
+   "name_1x": "GrNullOp",
+   "name_2x": "GrComment",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 2 (GR_NULL_OP)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 304,
+   "name_1x": "GrEscape",
+   "name_2x": "GrEscape",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 3 (GR_ESCAPE)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 305,
+   "name_1x": "GrSaveState",
+   "name_2x": "GrSaveState",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 4 (GR_SAVE_STATE)",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 306,
+   "name_1x": "GrRestoreState",
+   "name_2x": "GrRestoreState",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 5 (GR_RESTORE_STATE)",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 307,
+   "name_1x": "GrNewPage",
+   "name_2x": "GrNewPage",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 6 (GR_NEW_PAGE)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 308,
+   "name_1x": "GrApplyRotation",
+   "name_2x": "GrApplyRotation",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 7 (GR_APPLY_ROTATION)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 309,
+   "name_1x": "GrApplyScale",
+   "name_2x": "GrApplyScale",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 8 (GR_APPLY_SCALE)",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 310,
+   "name_1x": "GrApplyTranslation",
+   "name_2x": "GrApplyTranslation",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 9 (GR_APPLY_TRANSLATION)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 311,
+   "name_1x": "GrSetTransform",
+   "name_2x": "GrSetTransform",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 10 (GR_SET_TRANSFORM)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 312,
+   "name_1x": "GrApplyTransform",
+   "name_2x": "GrApplyTransform",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 11 (GR_APPLY_TRANSFORM)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 313,
+   "name_1x": "GrSetNullTransform",
+   "name_2x": "GrSetNullTransform",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 12 (GR_SET_NULL_TRANSFORM)",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 314,
+   "name_1x": "GrDrawLine",
+   "name_2x": "GrDrawLine",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 13 (GR_DRAW_LINE)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 315,
+   "name_1x": "GrDrawLineTo",
+   "name_2x": "GrDrawLineTo",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 14 (GR_DRAW_LINE_TO)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 316,
+   "name_1x": "GrDrawRect",
+   "name_2x": "GrDrawRect",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 15 (GR_DRAW_RECT)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 317,
+   "name_1x": "GrDrawRectTo",
+   "name_2x": "GrDrawRectTo",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 16 (GR_DRAW_RECT_TO)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 318,
+   "name_1x": "GrDrawHLine",
+   "name_2x": "GrDrawHLine",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 17 (GR_DRAW_HLINE)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 319,
+   "name_1x": "GrDrawHLineTo",
+   "name_2x": "GrDrawHLineTo",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 18 (GR_DRAW_HLINE_TO)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 320,
+   "name_1x": "GrDrawVLine",
+   "name_2x": "GrDrawVLine",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 19 (GR_DRAW_VLINE)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 321,
+   "name_1x": "GrDrawVLineTo",
+   "name_2x": "GrDrawVLineTo",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 20 (GR_DRAW_VLINE_TO)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 322,
+   "name_1x": "GrDrawRoundRect",
+   "name_2x": null,
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 21 (GR_DRAW_ROUND_RECT); im Kernel nur RETF (nicht implementiert)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 323,
+   "name_1x": "GrDrawRoundRectTo",
+   "name_2x": null,
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 22 (GR_DRAW_ROUND_RECT_TO); im Kernel nur RETF (nicht implementiert)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 324,
+   "name_1x": "GrDrawPoint",
+   "name_2x": "GrDrawPoint",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 23 (GR_DRAW_POINT); Code setzt Start=Ende. SDK-Profil nennt 324 GrDrawEllipse – widerlegt, GrDrawEllipse ist 333",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 325,
+   "name_1x": "GrDrawPointAtCP",
+   "name_2x": "GrDrawPointAtCP",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 24 (GR_DRAW_POINT_CP)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 326,
+   "name_1x": "GrDrawBitmap",
+   "name_2x": "GrDrawBitmap",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 25 (GR_DRAW_BITMAP)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 327,
+   "name_1x": "GrDrawBitmapAtCP",
+   "name_2x": "GrDrawBitmapAtCP",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 26 (GR_DRAW_BITMAP_CP)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 328,
+   "name_1x": "GrDrawChar",
+   "name_2x": "GrDrawChar",
+   "confidence": "sicher (getestet)",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 29 (GR_DRAW_CHAR); Test K12 (GeoWorks 1.28, 20.11.2026): DX=Zeichen, AX/BX=Position, Element 1D ch x y OK",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 329,
+   "name_1x": "GrDrawCharAtCP",
+   "name_2x": "GrDrawCharAtCP",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 30 (GR_DRAW_CHAR_CP)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 330,
+   "name_1x": "GrDrawText",
+   "name_2x": "GrDrawText",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 31 (GR_DRAW_TEXT)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 331,
+   "name_1x": "GrDrawTextAtCP",
+   "name_2x": "GrDrawTextAtCP",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 32 (GR_DRAW_TEXT_CP)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 332,
+   "name_1x": "GrDrawPolyline",
+   "name_2x": "GrDrawPolyline",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 35 (GR_DRAW_POLYLINE)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 333,
+   "name_1x": "GrDrawEllipse",
+   "name_2x": "GrDrawEllipse",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 36 (GR_DRAW_ELLIPSE)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 334,
+   "name_1x": "GrDrawArc",
+   "name_2x": null,
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 37 (GR_DRAW_ARC); im Kernel nur RETF (nicht implementiert)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 335,
+   "name_1x": "GrDrawSpline",
+   "name_2x": "GrDrawSpline",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 38 (GR_DRAW_SPLINE)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 336,
+   "name_1x": "GrFillRect",
+   "name_2x": "GrFillRect",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 40 (GR_FILL_RECT)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 337,
+   "name_1x": "GrFillRectTo",
+   "name_2x": "GrFillRectTo",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 41 (GR_FILL_RECT_TO)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 338,
+   "name_1x": "GrFillRoundRect",
+   "name_2x": null,
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 42 (GR_FILL_ROUND_RECT); im Kernel nur RETF (nicht implementiert)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 339,
+   "name_1x": "GrFillRoundRectTo",
+   "name_2x": null,
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 43 (GR_FILL_ROUND_RECT_TO); im Kernel nur RETF (nicht implementiert)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 340,
+   "name_1x": "GrFillArc",
+   "name_2x": null,
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 44 (GR_FILL_ARC); im Kernel nur RETF (nicht implementiert)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 341,
+   "name_1x": "GrFillPolygon",
+   "name_2x": "GrFillPolygon",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 45 (GR_FILL_POLYGON)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 342,
+   "name_1x": "GrFillEllipse",
+   "name_2x": "GrFillEllipse",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 46 (GR_FILL_ELLIPSE)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 343,
+   "name_1x": "GrSetDrawMode",
+   "name_2x": "GrSetMixMode",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 47 (GR_SET_DRAW_MODE)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 344,
+   "name_1x": "GrRelMoveTo",
+   "name_2x": "GrRelMoveTo",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 48 (GR_REL_MOVE_TO)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 345,
+   "name_1x": "GrMoveTo",
+   "name_2x": "GrMoveTo",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 49 (GR_MOVE_TO)",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 346,
+   "name_1x": "GrSetLineColor",
+   "name_2x": "GrSetLineColor",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 50 (GR_SET_LINE_COLOR)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 347,
+   "name_1x": "GrSetLineMask",
+   "name_2x": "GrSetLineMask",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 51 (GR_SET_LINE_MASK)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 348,
+   "name_1x": "GrSetLineColorMap",
+   "name_2x": "GrSetLineColorMap",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 52 (GR_SET_LINE_COLOR_MAP)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 349,
+   "name_1x": "GrSetLineWidth",
+   "name_2x": "GrSetLineWidth",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 53 (GR_SET_LINE_WIDTH)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 350,
+   "name_1x": "GrSetLineJoin",
+   "name_2x": "GrSetLineJoin",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 54 (GR_SET_LINE_JOIN)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 351,
+   "name_1x": "GrSetLineEnd",
+   "name_2x": "GrSetLineEnd",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 55 (GR_SET_LINE_END)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 352,
+   "name_1x": "GrSetLineAttr",
+   "name_2x": "GrSetLineAttr",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 56 (GR_SET_LINE_ATTR)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 353,
+   "name_1x": "GrSetMiterLimit",
+   "name_2x": "GrSetMiterLimit",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 57 (GR_SET_MITER_LIMIT)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 354,
+   "name_1x": "GrSetLineStyle",
+   "name_2x": "GrSetLineStyle",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 58 (GR_SET_LINE_STYLE)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 355,
+   "name_1x": "GrSetAreaColor",
+   "name_2x": "GrSetAreaColor",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 59 (GR_SET_AREA_COLOR)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 356,
+   "name_1x": "GrSetAreaMask",
+   "name_2x": "GrSetAreaMask",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 60 (GR_SET_AREA_MASK)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 357,
+   "name_1x": "GrSetAreaColorMap",
+   "name_2x": "GrSetAreaColorMap",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 61 (GR_SET_AREA_COLOR_MAP)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 358,
+   "name_1x": "GrSetAreaAttr",
+   "name_2x": "GrSetAreaAttr",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 62 (GR_SET_AREA_ATTR)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 359,
+   "name_1x": "GrSetTextColor",
+   "name_2x": "GrSetTextColor",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 63 (GR_SET_TEXT_COLOR)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 360,
+   "name_1x": "GrSetTextMask",
+   "name_2x": "GrSetTextMask",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 64 (GR_SET_TEXT_MASK)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 361,
+   "name_1x": "GrSetTextColorMap",
+   "name_2x": "GrSetTextColorMap",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 65 (GR_SET_TEXT_COLOR_MAP)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 362,
+   "name_1x": "GrSetTextStyle",
+   "name_2x": "GrSetTextStyle",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 66 (GR_SET_TEXT_STYLE)",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 363,
+   "name_1x": "GrSetTextMode",
+   "name_2x": "GrSetTextMode",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 67 (GR_SET_TEXT_MODE)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 364,
+   "name_1x": "GrSetTextSpacePad",
+   "name_2x": "GrSetTextSpacePad",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 68 (GR_SET_TEXT_SPACE_PAD)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 365,
+   "name_1x": "GrSetTextAttr",
+   "name_2x": "GrSetTextAttr",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 69 (GR_SET_TEXT_ATTR)",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 366,
+   "name_1x": "GrSetFont",
+   "name_2x": "GrSetFont",
+   "confidence": "sicher (getestet)",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 70 (GR_SET_FONT); Test K12 (GeoWorks 1.28, 20.11.2026): Element 46: WBFixed Groesse, FontID OK",
+   "used_by_PS": true
+  },
+  {
+   "ordinal": 367,
+   "name_1x": "GrSetStringBounds",
+   "name_2x": "GrSetGStringBounds",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 71 (GR_SET_STRING_BOUNDS)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 368,
+   "name_1x": "GrDrawTextField",
+   "name_2x": "GrDrawTextField",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 33 (GR_DRAW_TEXT_FIELD)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 369,
+   "name_1x": "GrCreatePalette",
+   "name_2x": "GrCreatePalette",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 72 (GR_CREATE_PALETTE)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 370,
+   "name_1x": "GrDestroyPalette",
+   "name_2x": "GrDestroyPalette",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 73 (GR_DESTROY_PALETTE)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 371,
+   "name_1x": "GrSetPaletteEntry",
+   "name_2x": "GrSetPaletteEntry",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 74 (GR_SET_PALETTE_ENTRY)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 372,
+   "name_1x": "GrSetPalette",
+   "name_2x": "GrSetPalette",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 75 (GR_SET_PALETTE)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 373,
+   "name_1x": "GrSetBorderWidth",
+   "name_2x": null,
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 76 (GR_SET_BORDER_WIDTH)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 374,
+   "name_1x": "GrSetBorderJoin",
+   "name_2x": null,
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 77 (GR_SET_BORDER_JOIN)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 375,
+   "name_1x": "GrDrawPolygon",
+   "name_2x": "GrDrawPolygon",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 39 (GR_DRAW_POLYGON)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 376,
+   "name_1x": "GrSetTrackKern",
+   "name_2x": "GrSetTrackKern",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 85 (GR_SET_TRACK_KERN)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 377,
+   "name_1x": "GrInitDefaultTransform",
+   "name_2x": "GrInitDefaultTransform",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 86 (GR_INIT_DEFAULT_TRANSFORM)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 378,
+   "name_1x": "GrSetDefaultTransform",
+   "name_2x": "GrSetDefaultTransform",
+   "confidence": "sicher",
+   "evidence": "KLIB.GEO Abspieltabelle, Opcode 87 (GR_SET_DEFAULT_TRANSFORM)",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 440,
+   "name_1x": "GrGetWinBounds",
+   "name_2x": "GrGetWinBounds",
+   "confidence": "sicher",
+   "evidence": "pcgeos-1-sdk-v2 (beobachtet), Code-Form passt",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 446,
+   "name_1x": "GrBeginUpdate",
+   "name_2x": "GrBeginUpdate",
+   "confidence": "sicher",
+   "evidence": "pcgeos-1-sdk-v2 (beobachtet), Code-Form passt",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 447,
+   "name_1x": "GrEndUpdate",
+   "name_2x": "GrEndUpdate",
+   "confidence": "sicher",
+   "evidence": "pcgeos-1-sdk-v2 (beobachtet), Code-Form passt",
+   "used_by_PS": false
+  },
+  {
+   "ordinal": 489,
+   "name_1x": "ObjCallSuperNoLock",
+   "name_2x": "ObjCallSuperNoLock",
+   "confidence": "sicher",
+   "evidence": "pcgeos-1-sdk-v2 (beobachtet), Code-Form passt",
+   "used_by_PS": false
+  }
+ ]
+}

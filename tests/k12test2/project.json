@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "name": "k12test2",
+  "kind": "application",
+  "backend": "ensemble12",
+  "cpu": "8086",
+  "long_name": "K12 Test 2 GString",
+  "token": "K12B",
+  "sources": [
+    {
+      "language": "nasm",
+      "path": "k12test2.nasm"
+    }
+  ],
+  "view": {
+    "width": 640,
+    "height": 400
+  },
+  "native_runtime_tested": false
+}

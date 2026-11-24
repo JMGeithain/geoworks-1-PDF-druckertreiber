@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "name": "k12test1",
+  "kind": "application",
+  "backend": "ensemble12",
+  "cpu": "8086",
+  "long_name": "K12 Test 1 Mathe",
+  "token": "K12A",
+  "sources": [
+    {
+      "language": "nasm",
+      "path": "k12test1.nasm"
+    }
+  ],
+  "view": {
+    "width": 640,
+    "height": 400
+  },
+  "native_runtime_tested": false
+}

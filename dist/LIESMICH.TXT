@@ -1,0 +1,56 @@
+PDF-Druckertreiber fuer GeoWorks Ensemble 1.2x  -  Version 1.2a
+===============================================================
+
+Dateien
+-------
+PDF.GEO      der Druckertreiber
+SPOOL.GEO    Spooler (Stand 2010) mit Endung .PDF statt .PS im Dialog
+             "In Datei drucken"
+spoolpdf.py  aendert eine andere SPOOL.GEO genauso (Python 3):
+             python spoolpdf.py SPOOL.GEO        -> .PDF
+             python spoolpdf.py SPOOL.GEO --ps   -> zurueck zu .PS
+
+Einrichten
+----------
+1. GeoWorks beenden. Sicherung von GEOWORKS\SYSTEM\SPOOL.GEO anlegen.
+2. PDF.GEO nach GEOWORKS\SYSTEM kopieren (dort liegt auch PS.GEO).
+3. Optional: SPOOL.GEO nach GEOWORKS\SYSTEM kopieren (Endung .PDF).
+   Wichtig: die Endung gilt dann fuer alle Drucker, die in eine Datei
+   drucken, auch fuer PostScript.
+4. GeoWorks starten, in den Voreinstellungen unter Drucker
+   "PDF-Datei (In Datei drucken)" installieren. Die Schnittstelle ist
+   gleichgueltig (z.B. COM1); der Knopf "Testen" meldet "off-line".
+
+Drucken
+-------
+Im Druckdialog des Programms den Knopf "In Datei Drucken..." waehlen,
+Dateinamen eingeben, drucken. Ohne den gepatchten Spooler entsteht
+NAME.PS - einfach in NAME.PDF umbenennen.
+
+Was der Treiber kann
+--------------------
+- Linien, Rechtecke, Polygone, Ellipsen, auch gedreht und skaliert
+- Farben; Graumuster als Grautoene, 0-%-Muster bleiben durchsichtig,
+  Flaechenmuster (Gitter, Linien, Ziegel ...) als echte PDF-Muster
+- Querformat: Seite wird im PDF-Betrachter aufrecht angezeigt
+- Bitmaps (s/w, 16 und 256 Farben, RGB, auch gepackt)
+- in GeoWrite eingefuegte Grafiken (Grafik als Zeichen im Text)
+- Text: URW Roman/Sans/Mono/SymbolPS als PDF-Standardschriften
+  (Times, Helvetica, Courier, Symbol); alle anderen Umrissschriften
+  aus GEOWORKS\FONT werden als Umrisse eingebettet (nur benutzte
+  Zeichen). Fett/kursiv werden nachgebildet, wenn die Schrift sie nicht
+  enthaelt. Unterstrichen, durchgestrichen, hoch-/tiefgestellt.
+  Zeilenbreiten wie am Bildschirm. Text bleibt durchsuchbar.
+- Mehrere Seiten
+
+Grenzen
+-------
+- Bildschirm-Bitmapschriften (Berkeley, University, Bison, LED) werden
+  durch Helvetica ersetzt.
+- Muster bei Linien und Text erscheinen als Grauton.
+- Hoechstens 100 Seiten und 8 eingebettete Schriftschnitte je Druck.
+
+Bei Problemen
+-------------
+Haengt ein Druckauftrag, GeoWorks beenden und die Dateien in
+GEOWORKS\SYSTEM\SPOOL loeschen.

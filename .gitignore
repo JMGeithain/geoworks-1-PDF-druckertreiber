@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.lst
+*.o
+out/
+tests/out*
+# Originaldateien von GeoWorks gehoeren nicht ins Repository
+SPOOL.GEO
+KERNEL.EXE
+*.FNT

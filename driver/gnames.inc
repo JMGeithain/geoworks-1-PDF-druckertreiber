@@ -1,0 +1,45 @@
+; erzeugt aus Mac-Roman (GEOS-Zeichensatz) -> Adobe-Glyphennamen
+gn_off:
+ dw gn_txt+0,gn_txt+6,gn_txt+13,gn_txt+22,gn_txt+33,gn_txt+40,gn_txt+48,gn_txt+58,gn_txt+70,gn_txt+80,gn_txt+91,gn_txt+100,gn_txt+105,gn_txt+111,gn_txt+118,gn_txt+125
+ dw gn_txt+131,gn_txt+136,gn_txt+140,gn_txt+144,gn_txt+150,gn_txt+155,gn_txt+160,gn_txt+164,gn_txt+170,gn_txt+176,gn_txt+181,gn_txt+187,gn_txt+197,gn_txt+202,gn_txt+208,gn_txt+216
+ dw gn_txt+225,gn_txt+228,gn_txt+230,gn_txt+232,gn_txt+234,gn_txt+236,gn_txt+238,gn_txt+240,gn_txt+242,gn_txt+244,gn_txt+246,gn_txt+248,gn_txt+250,gn_txt+252,gn_txt+254,gn_txt+256
+ dw gn_txt+258,gn_txt+260,gn_txt+262,gn_txt+264,gn_txt+266,gn_txt+268,gn_txt+270,gn_txt+272,gn_txt+274,gn_txt+276,gn_txt+278,gn_txt+280,gn_txt+292,gn_txt+302,gn_txt+315,gn_txt+327
+ dw gn_txt+338,gn_txt+344,gn_txt+346,gn_txt+348,gn_txt+350,gn_txt+352,gn_txt+354,gn_txt+356,gn_txt+358,gn_txt+360,gn_txt+362,gn_txt+364,gn_txt+366,gn_txt+368,gn_txt+370,gn_txt+372
+ dw gn_txt+374,gn_txt+376,gn_txt+378,gn_txt+380,gn_txt+382,gn_txt+384,gn_txt+386,gn_txt+388,gn_txt+390,gn_txt+392,gn_txt+394,gn_txt+396,gn_txt+406,gn_txt+410,gn_txt+421,gn_txt+432
+ dw gn_txt+440,gn_txt+450,gn_txt+456,gn_txt+465,gn_txt+472,gn_txt+479,gn_txt+489,gn_txt+499,gn_txt+506,gn_txt+513,gn_txt+525,gn_txt+535,gn_txt+542,gn_txt+548,gn_txt+557,gn_txt+564
+ dw gn_txt+571,gn_txt+583,gn_txt+593,gn_txt+600,gn_txt+607,gn_txt+619,gn_txt+629,gn_txt+636,gn_txt+643,gn_txt+650,gn_txt+662,gn_txt+672,gn_txt+679,gn_txt+686,gn_txt+693,gn_txt+705
+ dw gn_txt+715,gn_txt+722,gn_txt+729,gn_txt+734,gn_txt+743,gn_txt+751,gn_txt+758,gn_txt+768,gn_txt+779,gn_txt+790,gn_txt+800,gn_txt+810,gn_txt+816,gn_txt+825,gn_txt+834,gn_txt+837
+ dw gn_txt+844,gn_txt+853,gn_txt+863,gn_txt+873,gn_txt+886,gn_txt+890,gn_txt+893,gn_txt+905,gn_txt+915,gn_txt+923,gn_txt+926,gn_txt+935,gn_txt+947,gn_txt+960,gn_txt+968,gn_txt+971
+ dw gn_txt+978,gn_txt+991,gn_txt+1002,gn_txt+1013,gn_txt+1021,gn_txt+1028,gn_txt+1040,gn_txt+1046,gn_txt+1060,gn_txt+1075,gn_txt+1084,gn_txt+1092,gn_txt+1099,gn_txt+1106,gn_txt+1113,gn_txt+1116
+ dw gn_txt+1119,gn_txt+1126,gn_txt+1133,gn_txt+1146,gn_txt+1160,gn_txt+1170,gn_txt+1181,gn_txt+1188,gn_txt+1196,gn_txt+1206,gn_txt+1216,gn_txt+1225,gn_txt+1230,gn_txt+1244,gn_txt+1259,gn_txt+1267
+ dw gn_txt+1275,gn_txt+1285,gn_txt+1300,gn_txt+1315,gn_txt+1328,gn_txt+1340,gn_txt+1352,gn_txt+1364,gn_txt+1371,gn_txt+1381,gn_txt+1388,gn_txt+1395,gn_txt+1407,gn_txt+1417,gn_txt+1424,gn_txt+1431
+ dw gn_txt+1443,gn_txt+1451,gn_txt+1458,gn_txt+1465,gn_txt+1477,gn_txt+1484,gn_txt+1493,gn_txt+1504,gn_txt+1510,gn_txt+1517,gn_txt+1523,gn_txt+1533,gn_txt+1538,gn_txt+1546,gn_txt+1559,gn_txt+1566
+gn_txt:
+ db "space",0,"exclam",0,"quotedbl",0,"numbersign",0,"dollar",0,"percent",0,"ampersand",0,"quotesingle",0
+ db "parenleft",0,"parenright",0,"asterisk",0,"plus",0,"comma",0,"hyphen",0,"period",0,"slash",0
+ db "zero",0,"one",0,"two",0,"three",0,"four",0,"five",0,"six",0,"seven",0
+ db "eight",0,"nine",0,"colon",0,"semicolon",0,"less",0,"equal",0,"greater",0,"question",0
+ db "at",0,"A",0,"B",0,"C",0,"D",0,"E",0,"F",0,"G",0
+ db "H",0,"I",0,"J",0,"K",0,"L",0,"M",0,"N",0,"O",0
+ db "P",0,"Q",0,"R",0,"S",0,"T",0,"U",0,"V",0,"W",0
+ db "X",0,"Y",0,"Z",0,"bracketleft",0,"backslash",0,"bracketright",0,"asciicircum",0,"underscore",0
+ db "grave",0,"a",0,"b",0,"c",0,"d",0,"e",0,"f",0,"g",0
+ db "h",0,"i",0,"j",0,"k",0,"l",0,"m",0,"n",0,"o",0
+ db "p",0,"q",0,"r",0,"s",0,"t",0,"u",0,"v",0,"w",0
+ db "x",0,"y",0,"z",0,"braceleft",0,"bar",0,"braceright",0,"asciitilde",0,"uni007F",0
+ db "Adieresis",0,"Aring",0,"Ccedilla",0,"Eacute",0,"Ntilde",0,"Odieresis",0,"Udieresis",0,"aacute",0
+ db "agrave",0,"acircumflex",0,"adieresis",0,"atilde",0,"aring",0,"ccedilla",0,"eacute",0,"egrave",0
+ db "ecircumflex",0,"edieresis",0,"iacute",0,"igrave",0,"icircumflex",0,"idieresis",0,"ntilde",0,"oacute",0
+ db "ograve",0,"ocircumflex",0,"odieresis",0,"otilde",0,"uacute",0,"ugrave",0,"ucircumflex",0,"udieresis",0
+ db "dagger",0,"degree",0,"cent",0,"sterling",0,"section",0,"bullet",0,"paragraph",0,"germandbls",0
+ db "registered",0,"copyright",0,"trademark",0,"acute",0,"dieresis",0,"notequal",0,"AE",0,"Oslash",0
+ db "infinity",0,"plusminus",0,"lessequal",0,"greaterequal",0,"yen",0,"mu",0,"partialdiff",0,"summation",0
+ db "product",0,"pi",0,"integral",0,"ordfeminine",0,"ordmasculine",0,"uni03A9",0,"ae",0,"oslash",0
+ db "questiondown",0,"exclamdown",0,"logicalnot",0,"radical",0,"florin",0,"approxequal",0,"Delta",0,"guillemotleft",0
+ db "guillemotright",0,"ellipsis",0,"uni00A0",0,"Agrave",0,"Atilde",0,"Otilde",0,"OE",0,"oe",0
+ db "endash",0,"emdash",0,"quotedblleft",0,"quotedblright",0,"quoteleft",0,"quoteright",0,"divide",0,"lozenge",0
+ db "ydieresis",0,"Ydieresis",0,"fraction",0,"Euro",0,"guilsinglleft",0,"guilsinglright",0,"uniFB01",0,"uniFB02",0
+ db "daggerdbl",0,"periodcentered",0,"quotesinglbase",0,"quotedblbase",0,"perthousand",0,"Acircumflex",0,"Ecircumflex",0,"Aacute",0
+ db "Edieresis",0,"Egrave",0,"Iacute",0,"Icircumflex",0,"Idieresis",0,"Igrave",0,"Oacute",0,"Ocircumflex",0
+ db "uniF8FF",0,"Ograve",0,"Uacute",0,"Ucircumflex",0,"Ugrave",0,"dotlessi",0,"circumflex",0,"tilde",0
+ db "macron",0,"breve",0,"dotaccent",0,"ring",0,"cedilla",0,"hungarumlaut",0,"ogonek",0,"caron",0
