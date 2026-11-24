@@ -1,0 +1,12 @@
+PDF-Druckertreiber fuer GeoWorks Ensemble 1.2x
+Copyright 2026 JMGeithain
+
+Dieses Produkt enthaelt Software und Daten, die mit Hilfe folgender Quellen
+entwickelt wurden:
+- FreeGEOS / pcgeos (https://github.com/bluewaysw/pcgeos), Apache License 2.0
+- pcgeos-1-sdk-v2 (https://github.com/dnesbitt142/pcgeos-1-sdk-v2)
+- Adobe Font Metrics der 14 PDF-Standardschriften (Breitentabellen in
+  driver/widths.inc), Adobe Glyph List (driver/gnames.inc)
+
+GeoWorks, GeoWrite, GeoDraw und GeoPlanner sind Marken ihrer jeweiligen Inhaber.
+Das Repository enthaelt keine Original-Dateien von GeoWorks.

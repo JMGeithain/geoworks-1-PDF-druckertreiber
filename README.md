@@ -89,4 +89,4 @@ Repository enthält keine Original-Dateien von GeoWorks.
 
 ## Lizenz
 
-*Noch festzulegen.*
+Apache License 2.0, siehe [`LICENSE`](LICENSE) und [`NOTICE`](NOTICE).
